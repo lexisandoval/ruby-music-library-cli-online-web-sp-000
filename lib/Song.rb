@@ -30,15 +30,17 @@ class Song
     song
   end
 
+  def artist=(artist)
+    @artist = artist
+    artist.add_song(self)
+  end
+
   def genre=(genre)
     @genre = genre
     genre.songs << self unless genre.songs.include?(self)
   end
 
-  def artist=(artist)
-    @artist = artist
-    artist.add_song(self)
-  end
+
 
   def self.new_from_filename(filename)
     array = filename.split(" - ")
