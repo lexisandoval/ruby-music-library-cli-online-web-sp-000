@@ -9,7 +9,8 @@ class MusicLibraryController
 
   def call
     input = gets.strip
-    input != exit
+
+    while input != exit
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of the artists in your library, enter 'list artists'."
@@ -34,6 +35,7 @@ class MusicLibraryController
     when "play song"
       play_song
     end
+  end
   end
 
   def list_songs
