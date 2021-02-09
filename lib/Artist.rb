@@ -11,6 +11,18 @@ class Artist
     @songs = []
   end
 
+  def self.all
+    @@all
+  end
+
+  def save
+    @@all << self
+  end
+
+  def self.destroy_all
+    @@all.clear
+  end
+
   def genres
     @new = []
     @songs.each do |song|
@@ -42,17 +54,7 @@ class Artist
     @songs
   end
 
-  def self.all
-    @@all
-  end
 
-  def save
-    @@all << self
-  end
-
-  def self.destroy_all
-    @@all.clear
-  end
 
   def self.create(artist)
     artist = self.new(artist)
