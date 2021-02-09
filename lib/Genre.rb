@@ -29,9 +29,9 @@ class Genre
     genre
   end
 
-  def songs
-    @songs
-  end
+  # def songs
+  #   @songs
+  # end
 
   def artists
     @new_array = []
