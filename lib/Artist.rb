@@ -52,7 +52,7 @@ class Artist
         @new << song.genre
       end
     end
-      @new
+    @new
   end
 
 end
