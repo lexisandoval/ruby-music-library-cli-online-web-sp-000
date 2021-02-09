@@ -49,7 +49,6 @@ class Artist
     @new = []
     @songs.each do |song|
       if !@new.include?(song.genre)
-
         @new << song.genre
       end
     end
