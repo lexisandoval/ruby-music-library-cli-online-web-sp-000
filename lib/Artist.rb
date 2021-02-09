@@ -59,10 +59,4 @@ class Artist
       @new
   end
 
-
-
-
-
-
-
 end
