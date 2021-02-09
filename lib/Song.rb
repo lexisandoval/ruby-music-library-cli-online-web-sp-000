@@ -40,10 +40,6 @@ class Song
     genre.songs << self unless genre.songs.include?(self)
   end
 
-  # def artist
-  #   @artist
-  # end
-
   def artist=(artist)
     @artist = artist
     artist.add_song(self)
