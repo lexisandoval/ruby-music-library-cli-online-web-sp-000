@@ -23,18 +23,11 @@ class Artist
     @@all.clear
   end
 
-  def genres
-    @new = []
-    @songs.each do |song|
-      if @new.include?(song.genre)
-        nil
-      else
-        @new << song.genre
-      end
-    end
-      @new
+  def self.create(artist)
+    artist = self.new(artist)
+    artist.save
+    artist
   end
-
 
   def add_song(song)
     if song.artist == nil
@@ -54,11 +47,22 @@ class Artist
     @songs
   end
 
-
-
-  def self.create(artist)
-    artist = self.new(artist)
-    artist.save
-    artist
+  def genres
+    @new = []
+    @songs.each do |song|
+      if @new.include?(song.genre)
+        nil
+      else
+        @new << song.genre
+      end
+    end
+      @new
   end
+
+
+
+
+
+
+
 end
