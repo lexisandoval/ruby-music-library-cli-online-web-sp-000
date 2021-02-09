@@ -47,7 +47,7 @@ class Song
 
     artist_name = array[0]
     song_name = array[1]
-    genre_name = array[2].split(".mp3")
+    genre_name = array[2].split(".mp3").join
 
     genre = Genre.find_or_create_by_name(genre_name)
     artist = Artist.find_or_create_by_name(artist_name)
